@@ -1,4 +1,4 @@
-# Sarah Krispy Snacks E-Commerce Website 🍌🥜
+# Sarah Krispy Snacks E-Commerce Website 
 Welcome to the official repository for the Sarah Krispy Snacks e-commerce platform! This project is dedicated to building a modern and user-friendly online store for a beloved snack brand that specializes in ripe and unripe plantain chips and coated peanuts.
 
 # Project Overview
