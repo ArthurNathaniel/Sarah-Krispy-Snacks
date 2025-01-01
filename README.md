@@ -29,7 +29,7 @@ Backend: PHP to handle business logic and database interactions.
 
 Database: MySQL for managing product details, user accounts, and order records.
 
-#Why Sarah Krispy Snacks?
+# Why Sarah Krispy Snacks?
 
 Sarah Krispy Snacks is a brand that prides itself on delivering high-quality snacks made with care and passion. By building this website, we aim to bring the same dedication and quality to their online presence, allowing them to reach a wider audience.
 
