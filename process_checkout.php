@@ -2,6 +2,12 @@
 require 'db.php'; // Include database connection
 session_start();
 
+// Ensure customer is logged in
+if (!isset($_SESSION['customer_id'])) {
+    echo json_encode(['success' => false, 'message' => 'You must be logged in to place an order.']);
+    exit(); // Stop further execution if customer is not logged in
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
         // Validate input
@@ -26,13 +32,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $total += $item['price'] * $item['quantity'];
         }
 
+        // Get customer_id from session
+        $customer_id = $_SESSION['customer_id'];
+
         // Start transaction
         $conn->beginTransaction();
 
         // Insert order
         $stmt = $conn->prepare("
-            INSERT INTO orders (name, phone, email, pickup_delivery, address, total)
-            VALUES (:name, :phone, :email, :pickup_delivery, :address, :total)
+            INSERT INTO orders (name, phone, email, pickup_delivery, address, total, customer_id)
+            VALUES (:name, :phone, :email, :pickup_delivery, :address, :total, :customer_id)
         ");
         $stmt->execute([
             ':name' => $name,
@@ -41,6 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             ':pickup_delivery' => $pickup_delivery,
             ':address' => $address,
             ':total' => $total,
+            ':customer_id' => $customer_id, // Add customer_id
         ]);
         $order_id = $conn->lastInsertId();
 

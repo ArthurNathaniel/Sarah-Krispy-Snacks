@@ -100,6 +100,7 @@ try {
         </div>
         </div>
     </div>
+    <a href="customer_logout.php">Logout</a>
 </body>
 </html>
 
