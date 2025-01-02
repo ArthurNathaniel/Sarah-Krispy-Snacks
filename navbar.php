@@ -1,10 +1,7 @@
 <div class="nav_all">
     <div class="header_banner">
         <div class="greet">
-            <!-- <a href=""><i class="fa-brands fa-square-facebook"></i></a>
-            <a href=""><i class="fa-brands fa-square-instagram"></i></a>
-            <a href=""><i class="fa-brands fa-square-x-twitter"></i></a>
-            <a href=""><i class="fa-brands fa-tiktok"></i></a> -->
+       
         </div>
         <div class="banner_links">
             <a href="customer_login.php">Login</a> | 
@@ -23,6 +20,7 @@
                 <i class="fa-solid fa-cart-shopping"></i> Cart
                 <span class="cart-badge"><?php echo $cartCount; ?></span>
             </a>
+            <a href="blog.php">Blog</a>
             <a href="contact.php">Contact Us</a>
         </div>
         <!-- <div class="contact_us">

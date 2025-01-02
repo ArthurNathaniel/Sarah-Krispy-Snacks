@@ -1,0 +1,12 @@
+.blog-container{
+    margin-top: 50px;
+    padding: 0 10%;
+}
+.blog-container img{
+    height: auto;
+}
+
+@media only screen and (max-width: 1110px) {
+    .blog-container img{
+        height: auto;
+    }}
