@@ -1,13 +1,13 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "sarah_krispy";
+// $servername = "localhost";
+// $username = "root";
+// $password = "";
+// $dbname = "sarah_krispy";
 
-// $servername = "tellafarrestaurant.com";
-// $username = "u257031014_ayo";
-// $password = "OnGod@@123";
-// $dbname = "u257031014_ayo";
+$servername = "nathstack.tech";
+$username = "u257031014_sarah";
+$password = "OnGod@@123";
+$dbname = "u257031014_sarah";
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
