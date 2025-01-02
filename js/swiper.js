@@ -5,6 +5,8 @@ var swiper = new Swiper(".mySwiper", {
       delay: 2500,
       disableOnInteraction: false,
     },
+    loop:true,
+    speed:2500,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,

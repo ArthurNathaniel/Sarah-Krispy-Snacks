@@ -35,7 +35,7 @@ body{
   padding: 15px 35px;
    border: none;
    font-weight: 600;
-   color: red;
+   color: #CD1827;
    font-size: 17px;
 }
 
@@ -71,7 +71,7 @@ body{
     background-color: transparent;
     border: none;
     font-size: 2em;
-    color: red;
+    color: #CD1827;
 }
 
 .food_name{
@@ -86,7 +86,7 @@ body{
 
 }
 .price{
-    background-color: #000;
+    background-color: #CD1827;
     width: 50%;
     color: #fff;
     padding: 10px;
@@ -115,7 +115,7 @@ body{
 }
 
 .fa-minus{
-    border:2px solid red;
+    border:2px solid #CD1827;
     height: 2.5em;
     width: 2.5em;
      border-radius: 50%;
@@ -143,7 +143,7 @@ body{
     width: 100%;
     height: 45px;
     border: none;
-    background-color: red;
+    background-color: #CD1827;
     border-radius: 30px;
     color: #fff;
     font-weight: 500;

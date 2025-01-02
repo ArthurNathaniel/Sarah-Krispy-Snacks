@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
   font-family: "Manrope", serif;
-
 }
 
 body {
@@ -30,7 +29,7 @@ body {
   height: 45px;
   width: 100%;
   border: none;
-  background-color: #CD1827;
+  background-color: #cd1827;
   color: #fff;
 }
 
@@ -66,13 +65,13 @@ body {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .logo_name span {
-  color: #CD1827;
+  color: #cd1827;
 }
 .logout {
-  border: 2px solid #CD1827;
+  border: 2px solid #cd1827;
   padding: 10px 30px;
   border-radius: 50px;
-  background-color: #CD1827;
+  background-color: #cd1827;
   color: #fff;
   position: absolute;
   bottom: 30px;
@@ -181,7 +180,7 @@ td {
   text-align: left;
 }
 th {
-  background-color: #CD1827;
+  background-color: #cd1827;
   color: white;
 }
 
@@ -241,7 +240,7 @@ th {
   text-decoration: none;
 }
 .cart-badge {
-  background-color: #CD1827;
+  background-color: #cd1827;
   color: white;
   border-radius: 50%;
   padding: 2px 6px;
@@ -256,7 +255,7 @@ th {
   align-items: center;
 }
 
-.contact_us a{
+.contact_us a {
   color: #000;
 }
 .search-bar {
@@ -271,18 +270,41 @@ th {
   padding-left: 3%;
 }
 .footer_all {
-  border: 2px solid #ddd;
-  margin: 0 3%;
+ padding: 0 3%;
   margin-top: 50px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
   
+  background-color: #cd1827;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  padding-block: 50px;
+  color: #fff;
 }
 
-.quick_links h4{
-text-align: center;
+.social_media{
+  display: flex;
+  
+  gap: 15px;
+}
+.social_media a{
+  color: #fff;
+  font-size: 30px;
+  
+}
+.ft_tag{
+  display: flex;
+  flex-direction: column;
+}
+.ft_tag a{
+  padding-top: 20px;
+  color: #fff;
+}
+.ft_tag a:hover{
+  font-weight: 600;
+}
+
+.quick_links h4 {
+  text-align: center;
 }
 .map iframe {
   width: 100%;
@@ -293,18 +315,18 @@ text-align: center;
   margin-block: 15px;
 }
 
-#mobile-button{
+#mobile-button {
   display: none;
 }
 .mobile_links {
   position: fixed;
   top: 100px;
   width: 50%;
-right: 0;
+  right: 0;
   background-color: #f8f8f8;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
   overflow-y: auto;
-  padding:0 3%;
+  padding: 0 3%;
   padding-block: 40px;
   transform: translateX(100%);
   transition: transform 0.8s ease-in-out; /* Updated duration */
@@ -312,7 +334,7 @@ right: 0;
   flex-direction: column;
   z-index: 999; /* Stays below the search bar */
 }
-.cart{
+.cart {
   display: none;
 }
 @media only screen and (max-width: 1110px) {
@@ -320,21 +342,26 @@ right: 0;
     padding: 0 10%;
     margin-block: 15px;
   }
- 
+  .footer_all{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media only screen and (max-width: 610px) {
-  #mobile-button{
+  #mobile-button {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: transparent;
     border: none;
+    font-size: 22px;
+    cursor: pointer;
   }
-  .nav_links{
+  .nav_links {
     display: none;
   }
-  .contact_us{
+  .contact_us {
     display: none;
   }
 
@@ -342,11 +369,11 @@ right: 0;
     position: fixed;
     top: 100px;
     width: 50%;
-  right: 0;
+    right: 0;
     background-color: #f8f8f8;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
     overflow-y: auto;
-    padding:0 3%;
+    padding: 0 3%;
     padding-top: 15px;
     padding-bottom: 40px;
     transform: translateX(100%);
@@ -354,18 +381,17 @@ right: 0;
     display: flex;
     flex-direction: column;
     z-index: 999; /* Stays below the search bar */
-}
+  }
 
-.mobile_links.active {
+  .mobile_links.active {
     transform: translateX(0);
-}
+  }
 
-
-  .mobile_links a{
+  .mobile_links a {
     padding-top: 15px;
     color: #000;
   }
-  .search-bar{
+  .search-bar {
     position: fixed;
     top: 250px; /* Adjust to match the header or desi#CD1827 position */
     left: 0;
@@ -375,16 +401,19 @@ right: 0;
     padding: 10px;
     z-index: 1000; /* Ensures it stays above mobile_links */
   }
-  .close-search-bar{
+  .close-search-bar {
     position: fixed;
     text-align: right;
     width: 100%;
   }
-  .cart{
+  .cart {
     display: flex;
-  
   }
-  .cart a{
+  .cart a {
     color: #000;
+  }
+  .footer_all{
+    display: flex;
+    flex-direction: column;
   }
 }

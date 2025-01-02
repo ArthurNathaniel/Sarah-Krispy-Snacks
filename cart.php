@@ -78,8 +78,6 @@ if (isset($_POST['checkout'])) {
 $cartCount = array_sum(array_column($_SESSION['cart'], 'quantity'));
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -113,6 +111,15 @@ $cartCount = array_sum(array_column($_SESSION['cart'], 'quantity'));
                     <div class="cart-items">
                         <?php $total = 0; ?>
                         <?php foreach ($_SESSION['cart'] as $menuId => $item): ?>
+                            <?php
+                            // Fetch category name for the menu item
+                            $stmt = $conn->prepare("SELECT categories.name AS category_name FROM categories 
+                                                    JOIN menu ON categories.id = menu.category_id 
+                                                    WHERE menu.id = :menu_id");
+                            $stmt->bindParam(':menu_id', $menuId, PDO::PARAM_INT);
+                            $stmt->execute();
+                            $category = $stmt->fetch(PDO::FETCH_ASSOC);
+                            ?>
                             <?php $subtotal = $item['price'] * $item['quantity']; ?>
                             <div class="cart-item">
                                 <div class="food_image">
@@ -125,7 +132,7 @@ $cartCount = array_sum(array_column($_SESSION['cart'], 'quantity'));
 
                                 <div class="food_name">
                                     <h3><?php echo htmlspecialchars($item['name'], ENT_QUOTES); ?></h3>
-                                    <!-- <p>Price: GHS <?php echo number_format($item['price'], 2); ?></p> -->
+                                    <p>Category: <?php echo htmlspecialchars($category['category_name'], ENT_QUOTES); ?></p>
                                     <p class="price"> GH₵ <?php echo number_format($subtotal, 2); ?></p>
                                 </div>
                                 <div class="quantity">
@@ -145,36 +152,29 @@ $cartCount = array_sum(array_column($_SESSION['cart'], 'quantity'));
                                         </button>
                                     </form>
                                 </div>
-                                <!-- <p>Total: GHS <?php echo number_format($subtotal, 2); ?></p> -->
-
-
                             </div>
                             <?php $total += $subtotal; ?>
                         <?php endforeach; ?>
                     </div>
-
-
-
-        </div>
-        <div class="total_all">
-            <p>SubTotal GH₵ <?php echo number_format($total, 2); ?></strong></p>
-            <div class="line"></div>
-            <p><strong>Total: GH₵ <?php echo number_format($total, 2); ?></strong></p>
-            <div class="checkout_btn">
-                <a href="checkout.php" class="btn">
-                <button>Proceed to checkout</button>    
-                </a>
             </div>
+            <div class="total_all">
+                <p>SubTotal GH₵ <?php echo number_format($total, 2); ?></strong></p>
+                <div class="line"></div>
+                <p><strong>Total: GH₵ <?php echo number_format($total, 2); ?></strong></p>
+                <div class="checkout_btn">
+                    <a href="checkout.php" class="btn">
+                        <button>Proceed to checkout</button>    
+                    </a>
+                </div>
 
             </form>
         </div>
 
-      <div class="continue_shopping">
-      <a href="index.php"> <i class="fa-solid fa-arrow-left-long"></i> Continue Shopping</a>
-      </div>
+        <div class="continue_shopping">
+            <a href="index.php"> <i class="fa-solid fa-arrow-left-long"></i> Continue Shopping</a>
+        </div>
     <?php endif; ?>
     </div>
 </body>
 
 </html>
-<style>
