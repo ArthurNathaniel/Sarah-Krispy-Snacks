@@ -65,7 +65,6 @@ $menuItems = $menuItems_query->fetchAll(PDO::FETCH_ASSOC);
     <meta name="robots" content="index, follow">
     <title>Sarah Krispy Snacks & Catering Services - Quality Snacks & Catering</title>
     <?php include 'cdn.php'; ?>
-
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/index.css">
 </head>
@@ -135,7 +134,7 @@ $menuItems = $menuItems_query->fetchAll(PDO::FETCH_ASSOC);
                                     <input type="hidden" name="price" value="<?php echo $item['price']; ?>">
                                     <input type="hidden" name="image_path" value="<?php echo htmlspecialchars($item['image_path'], ENT_QUOTES); ?>">
                                     <div class="card_button">
-                                        <button type="submit" name="add_to_cart"> <i class="fa-solid fa-cart-plus"></i> Add to cart</button>
+                                        <button type="submit" name="add_to_cart"> <i class="fa-solid fa-cart-plus"></i> BUY </button>
                                     </div>
                                 </form>
                             </div>

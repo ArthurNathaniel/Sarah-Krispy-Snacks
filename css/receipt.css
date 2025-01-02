@@ -54,3 +54,24 @@
 .receipt-section p{
     margin-bottom: 10px;
 }
+
+.buttons{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.buttons button{
+    padding: 15px 45px;
+    margin-block: 15px;
+    background-color: #cd1827;
+    color: #fff;
+    border: none;
+}
+
+.continue_shopping a{
+    color: #000;
+    gap: 15px;
+}

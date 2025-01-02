@@ -1,13 +1,13 @@
 <div class="nav_all">
     <div class="header_banner">
-        <div class="social_media">
+        <div class="greet">
             <!-- <a href=""><i class="fa-brands fa-square-facebook"></i></a>
             <a href=""><i class="fa-brands fa-square-instagram"></i></a>
             <a href=""><i class="fa-brands fa-square-x-twitter"></i></a>
             <a href=""><i class="fa-brands fa-tiktok"></i></a> -->
         </div>
         <div class="banner_links">
-            <a href="customer_login.php">Sign In</a> | 
+            <a href="customer_login.php">Login</a> | 
             <a href="customer_signup.php">Signup</a> |
             <a href="order_history.php">Order History</a> |
             <a href="customer_logout.php">Logout</a>
