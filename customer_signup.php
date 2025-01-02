@@ -31,22 +31,45 @@ if (isset($_POST['signup'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Signup</title>
     <?php include 'cdn.php'; ?>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/signup.css">
 </head>
 <body>
+<div class="signup_all">
+        <div class="signup_box">
+            
     <form method="POST">
-        <h3>Customer Signup</h3>
+        
+    <div class="signup_title">
+    <div class="logo"></div>
+    <h3> Signup - <span>Sarah Krispy Snack</span></h3>
+    </div>
         <?php if (isset($error)) { echo "<p>$error</p>"; } ?>
-        <label for="name">Full Name:</label>
-        <input type="text" name="name" required>
+      <div class="forms">
+      <label for="name">Full Name:</label>
+      <input type="text" placeholder="Enter your full name" name="name" required>
+      </div>
         
-        <label for="email">Email:</label>
-        <input type="email" name="email" required>
+       <div class="forms">
+       <label for="email">Email Address:</label>
+       <input type="email" placeholder="Enter your email address" name="email" required>
+       </div>
+       
         
+        <div class="forms">
         <label for="password">Password:</label>
-        <input type="password" name="password" required>
+        <input type="password" placeholder="Enter your password " name="password" required>
+        </div>
         
-        <button type="submit" name="signup">Sign Up</button>
+      <div class="forms">
+      <button type="submit" name="signup">Sign Up</button>
+      </div>
     </form>
-    <p>Already have an account? <a href="customer_login.php">Login here</a></p>
+  <div class="forms">
+  <p>Already have an account? <a href="customer_login.php">Login here</a></p>
+  <p>Back to Login <a href="index.php">Click here</a></p>
+  </div>
+        </div>
+</div>
 </body>
 </html>

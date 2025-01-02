@@ -65,27 +65,28 @@ $menuItems = $menuItems_query->fetchAll(PDO::FETCH_ASSOC);
     <meta name="robots" content="index, follow">
     <title>Sarah Krispy Snacks & Catering Services - Quality Snacks & Catering</title>
     <?php include 'cdn.php'; ?>
-  
+
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
     <?php include 'navbar.php'; ?>
+    
     <div class="swiper_bg">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="./images/slide_1.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./images/slide_2.jpg" alt="">
-                    </div>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./images/slide_1.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/slide_2.jpg" alt="">
                 </div>
             </div>
         </div>
+    </div>
     <div class="index_all">
-     
+       
         <div class="title">
             <h2>Our Products</h2>
         </div>
@@ -121,20 +122,20 @@ $menuItems = $menuItems_query->fetchAll(PDO::FETCH_ASSOC);
                             </div>
                             <div class="card_details">
                                 <h4><?php echo htmlspecialchars($item['name'], ENT_QUOTES); ?></h4>
-                       <div class="card_two">
-                       <p class="category-name"><?php echo htmlspecialchars($item['category_name'], ENT_QUOTES); ?></p>
+                                <div class="card_two">
+                                    <p class="category-name"><?php echo htmlspecialchars($item['category_name'], ENT_QUOTES); ?></p>
 
-<div class="card_price">
-    <p>GH₵ <?php echo number_format($item['price'], 2); ?></p>
-</div>
-                       </div>
+                                    <div class="card_price">
+                                        <p>GH₵ <?php echo number_format($item['price'], 2); ?></p>
+                                    </div>
+                                </div>
                                 <form method="POST" action="">
                                     <input type="hidden" name="menu_id" value="<?php echo $item['id']; ?>">
                                     <input type="hidden" name="name" value="<?php echo htmlspecialchars($item['name'], ENT_QUOTES); ?>">
                                     <input type="hidden" name="price" value="<?php echo $item['price']; ?>">
                                     <input type="hidden" name="image_path" value="<?php echo htmlspecialchars($item['image_path'], ENT_QUOTES); ?>">
                                     <div class="card_button">
-                                        <button type="submit" name="add_to_cart">  <i class="fa-solid fa-cart-plus"></i> Add to cart</button>
+                                        <button type="submit" name="add_to_cart"> <i class="fa-solid fa-cart-plus"></i> Add to cart</button>
                                     </div>
                                 </form>
                             </div>

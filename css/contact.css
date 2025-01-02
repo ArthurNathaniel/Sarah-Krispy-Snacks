@@ -1,0 +1,40 @@
+.contact_us_all{
+    padding: 0 10%;
+    margin-top: 50px;
+}
+.contact_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.ct_box{
+    padding: 0 5%;
+    padding-block: 30px;
+    text-align: center;
+    background-color: #fff;
+    margin-top: 50px;
+}
+
+.ct_box a{
+    color: #000;
+}
+
+.contact_title{
+    margin-top: 30px;
+}
+
+
+@media only screen and (max-width: 1110px) {
+    .contact_grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 810px) {
+    .contact_grid{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

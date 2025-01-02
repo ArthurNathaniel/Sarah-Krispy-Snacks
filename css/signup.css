@@ -19,8 +19,12 @@
     text-align: center;
 }
 
+.signup_title .logo{
+    margin: auto;
+}
+
 .signup_title span{
-    color: #336AEA;
+    color: #cd1827;
 }
 
 .signup_title p{

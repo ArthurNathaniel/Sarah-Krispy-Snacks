@@ -1,0 +1,15 @@
+.about_text_all{
+    padding: 0 5%;
+    margin-top: 50px;
+}
+.about_text p{
+    margin-top: 10px;
+}
+
+.title h1 span{
+    color: #cd1827;
+}
+
+.cart-link{
+   display: none;
+}
